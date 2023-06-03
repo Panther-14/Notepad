@@ -19,12 +19,14 @@ namespace AplicacionBlogNotas.API.Services
         public static async Task<Response> NotepadRequestWithoutParams(string endpoint, HttpMethod httpMethod, string authMethod, string credentials, params object[] arguments)
         {
             string url = string.Concat(URL, endpoint);
+            MessageBox.Show(url);
+            Console.WriteLine(url);
             Response response = new Response();
             using (var httpClient = new HttpClient())
             {
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(authMethod, credentials);
 
-                var rquestContent = new StringContent(JsonConvert.SerializeObject(arguments[0]), Encoding.UTF8, "application/json");
+                var rquestContent = new StringContent(JsonConvert.SerializeObject(arguments[0]), null, "application/json");
 
                 try
                 {
@@ -65,6 +67,8 @@ namespace AplicacionBlogNotas.API.Services
         public static async Task<Response> NotepadRequestWithParams(string endpoint, HttpMethod httpMethod, string authMethod, string credentials, params object[] arguments)
         {
             string url = string.Concat(URL, endpoint, "/", arguments[0]);
+            MessageBox.Show(url);
+            Console.WriteLine(url);
             Response response = new Response();
             using (var httpClient = new HttpClient())
             {

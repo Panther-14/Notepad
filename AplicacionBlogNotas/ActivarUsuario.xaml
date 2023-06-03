@@ -1,0 +1,18 @@
+﻿<Window x:Class="AplicacionBlogNotas.ActivarUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionBlogNotas"
+        mc:Ignorable="d"
+        Title="ActivarUsuario" Height="450" Width="800">
+    <Grid>
+        <Label Content="Activar Usuario" HorizontalAlignment="Left" Margin="261,27,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Celular" Margin="140,130,613,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbCellphoneNumber" Margin="345,133,205,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30"/>
+        <Label Content="One Time Password" Margin="125,192,561,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbOneTimePassword" Margin="345,193,205,0" VerticalAlignment="Top" Height="30"/>
+        <Button Content="Aceptar" Margin="0,0,180,32" Click="btnAceptar" HorizontalAlignment="Right" Width="150" Height="30" VerticalAlignment="Bottom"/>
+        <Button Content="Cancelar" Margin="0,0,10,32" VerticalAlignment="Bottom" Height="30" Click="btnCancelar" HorizontalAlignment="Right" Width="150"/>
+    </Grid>
+</Window>

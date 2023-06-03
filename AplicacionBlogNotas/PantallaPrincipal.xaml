@@ -1,0 +1,38 @@
+﻿<Window x:Class="AplicacionBlogNotas.PantallaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionBlogNotas"
+        mc:Ignorable="d"
+        Title="PantallaPrincipal" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" x:Name="mbPrincipal" >
+            <MenuItem Header="Actualizar Perfil" Click="ActualizarPerfilUsuario"/>
+            <MenuItem Header="Registrar una nueva libreta" Click="RegistrarLibreta"/>
+            <MenuItem Header="Actualizar una libreta existente" Click="ActualizarLibreta"/>
+            <MenuItem Header="Eliminar una libreta existente" Click="EliminarLibreta"/>
+            <MenuItem Header="Registrar una nueva nota" Click="RegistrarNota"/>
+            <MenuItem Header="Actualizar una nota existente" Click="ActualizarNota"/>
+            <MenuItem Header="Eliminar una nota existente" Click="EliminarNota"/>
+            <MenuItem Header="Cerrar Sesión" Click="CerrarSesion"/>
+
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.RowSpan="2">
+                <ListBox x:Name="lbCarpetas" d:ItemsSource="{d:SampleData ItemCount=5}" DisplayMemberPath="Name" SelectionChanged="ObjetoSeleccionado"/>
+            </Grid>
+            <Grid Grid.Column="1" Grid.RowSpan="2">
+                <ListBox x:Name="lbNotas" d:ItemsSource="{d:SampleData ItemCount=5}" DisplayMemberPath="Title"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,4 +1,5 @@
 ﻿using AplicacionBlogNotas.API.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace AplicacionBlogNotas.API.Services
 {
@@ -13,9 +15,24 @@ namespace AplicacionBlogNotas.API.Services
     {
         private static readonly string CREDENTIALS = Properties.Settings.Default.Token;
 
-        public static async Task<Response> Consultar(int idUsuario)
+        public static async Task<Response> Consultar(int idUsuario, int idLibreta = -255 , int idPrioridad = -255)
         {
-            Response response = await NotepadServices.NotepadRequestWithParams("auth/nota", HttpMethod.Get, "Bearer", CREDENTIALS, idUsuario);
+            Response response;
+
+            if (idLibreta != -255 && idPrioridad != -255)
+            {
+                response = await NotepadServices.NotepadRequestWithoutParams("auth/nota/consultar", HttpMethod.Get, "Bearer", CREDENTIALS, new { idUsuario, idLibreta, idPrioridad });
+            }else if (idLibreta != -255 && idPrioridad == -255)
+            {
+                response = await NotepadServices.NotepadRequestWithoutParams("auth/nota/consultar", HttpMethod.Get, "Bearer", CREDENTIALS, new { idUsuario, idLibreta });
+            }else if (idLibreta == -255 && idPrioridad != -255)
+            {
+                response = await NotepadServices.NotepadRequestWithoutParams("auth/nota/consultar", HttpMethod.Get, "Bearer", CREDENTIALS, new { idUsuario, idPrioridad });
+            }
+            else
+            {
+                response = await NotepadServices.NotepadRequestWithoutParams("auth/nota/consultar", HttpMethod.Get, "Bearer", CREDENTIALS, new { idUsuario });
+            }
             return response;
         }
 
