@@ -1,0 +1,21 @@
+﻿<Window x:Class="AplicacionBlogNotas.EditarPerfil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionBlogNotas"
+        mc:Ignorable="d"
+        Title="Editar Perfil" Height="450" Width="800">
+    <Grid>
+        <Label Content="Editar Perfil" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="115,94,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Margin="115,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="115,170,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbApellidos" HorizontalAlignment="Left" Margin="115,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Contraseña" HorizontalAlignment="Center" Margin="0,94,0,0" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Margin="365,125,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Aceptar" Margin="0,0,140,10" Click="BtnAceptar" HorizontalAlignment="Right" Width="45" Height="20" VerticalAlignment="Bottom"/>
+        <Button Content="Cancelar" Margin="0,0,28,10" Click="BtnCancelar" HorizontalAlignment="Right" Width="49" Height="20" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>

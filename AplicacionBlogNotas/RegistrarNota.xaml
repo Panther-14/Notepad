@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionBlogNotas"
         mc:Ignorable="d"
-        Title="RegistrarNota" Height="450" Width="800">
+        Title="Registrar Nota" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="lbNoteWindowTitle" Content="Nota Nueva" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Título" HorizontalAlignment="Left" Margin="57,79,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbNoteTitle" HorizontalAlignment="Left" Margin="57,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="292" Height="20"/>
+        <Label Content="Contenido" HorizontalAlignment="Left" Margin="425,87,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbNoteContent" HorizontalAlignment="Left" Margin="425,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="240" Width="306"/>
+        <Button Content="Guardar" HorizontalAlignment="Right" Margin="0,0,155,23" VerticalAlignment="Bottom" Click="BtnGuardar"/>
+        <Button Content="Descartar" HorizontalAlignment="Right" Margin="0,0,69,23" VerticalAlignment="Bottom" Click="BtnCancelar"/>
+        <Label Content="Prioridad" HorizontalAlignment="Left" Margin="57,160,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbPrioridad" HorizontalAlignment="Left" Margin="57,195,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Name"/>
+
     </Grid>
 </Window>

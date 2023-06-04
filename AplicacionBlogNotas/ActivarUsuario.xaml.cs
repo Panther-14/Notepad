@@ -32,7 +32,7 @@ namespace AplicacionBlogNotas
             string phone = tbCellphoneNumber.Text;
             string password = tbOneTimePassword.Text;
 
-            if(!String.IsNullOrWhiteSpace(phone) || !String.IsNullOrWhiteSpace(password))
+            if(!String.IsNullOrWhiteSpace(phone) && !String.IsNullOrWhiteSpace(password))
             {
                 Response response = await AccessService.Activar(phone, password);
 

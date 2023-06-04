@@ -14,7 +14,7 @@ namespace AplicacionBlogNotas.API.Services
 
         public static async Task<Response> Consultar()
         {
-            Response response = await NotepadServices.NotepadRequestWithoutParams("auth/libreta", HttpMethod.Get, "Bearer", CREDENTIALS);
+            Response response = await NotepadServices.NotepadRequestWithoutParams("auth/prioridad/consultar", HttpMethod.Get, "Bearer", CREDENTIALS);
             return response;
         }
 

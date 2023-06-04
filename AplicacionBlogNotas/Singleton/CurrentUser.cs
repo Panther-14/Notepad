@@ -11,16 +11,16 @@ namespace AplicacionBlogNotas.Singleton
         private static CurrentUser? instance;
 
         public int IdUser { get; set; }
-        public string? Token { get; set; }
-        public string? Name { get; set; }
-        public string? LastName { get; set; }
+        public string Token { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
         public DateTime RegisterDate { get; set; }
         public int Status { get; set; }
-        public string? Phone { get; set; }
-        public string? Password { get; set; }
-        public string? LstAccesToken { get; set; }
+        public string Phone { get; set; }
+        public string Password { get; set; }
+        public string LstAccesToken { get; set; }
         public DateTime LastAccessDate { get; set; }
-        public string? TempPassword { get; set; }
+        public string TempPassword { get; set; }
         public DateTime ActivationDate { get; set; }
 
         private CurrentUser()

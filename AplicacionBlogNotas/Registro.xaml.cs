@@ -33,8 +33,8 @@ namespace AplicacionBlogNotas
             string maternalSurname = tbMaternalSurname.Text;
             string cellphoneNumber = tbCellphoneNumber.Text;
             string password = pbPassword.Password;
-            if (!String.IsNullOrWhiteSpace(name) || !String.IsNullOrWhiteSpace(paternalSurname) || !String.IsNullOrWhiteSpace(maternalSurname) 
-                || !String.IsNullOrWhiteSpace(cellphoneNumber) || !String.IsNullOrWhiteSpace(password)) {
+            if (!String.IsNullOrWhiteSpace(name) && !String.IsNullOrWhiteSpace(paternalSurname) && !String.IsNullOrWhiteSpace(maternalSurname) 
+                && !String.IsNullOrWhiteSpace(cellphoneNumber) && !String.IsNullOrWhiteSpace(password)) {
                 var user = new User()
                 {
                     Name = name,
